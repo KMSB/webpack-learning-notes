@@ -1,17 +1,19 @@
 #ExtractTextPlugin（[github](https://github.com/webpack/extract-text-webpack-plugin)）
 ##可以将你的样式提取到单独的css文件里
 ###优点：
-* 更少的 style 标签（ie 下会有限制）
-* 可以使用 CSS source-map
-* CSS 文件可以同时被请求
-* CSS 被分开缓存
-* 执行的更快 
+ * 更少的 style 标签（ie 下会有限制）
+ * 可以使用 CSS source-map
+ * CSS 文件可以同时被请求
+ * CSS 被分开缓存
+ * 执行的更快
+
 ###缺点：
-* 额外的HTTP请求
-* 更长的编译时间
-* 配置更加复杂
-* No runtime public path modification
-* No Hot Module Replacement
+ * 额外的HTTP请求
+ * 更长的编译时间
+ * 配置更加复杂
+ * No runtime public path modification
+ * No Hot Module Replacement
+
 ###API：
 ```
 new ExtractTextPlugin([id: string], filename: string, [options])
@@ -32,6 +34,7 @@ ExtractTextPlugin.extract([notExtractLoader], loader, [options])
   * loader：需要对 css 预处理的 loader ，如 [css!less] 
   * [options]：选项
     * publicPath : 覆盖 publicPath 配置
+
 ###实例配置：
 ```
 let ExtractTextPlugin = require('extract-text-webpack-plugin'); 
